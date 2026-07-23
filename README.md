@@ -6,15 +6,15 @@ El proyecto incorpora un layout principal con animaciones discretas, un área de
 
 ## Capturas del proyecto
 
-![Vista Principal - Hero Section](./capturas_del_proyecto/captura1.jpg)
+![Vista Principal - Hero Section](./capturas_del_proyecto/captura1.png)
 
-![Métricas y Proyectos - Portfolio](./capturas_del_proyecto/captura2.jpg)
+![Métricas y Proyectos - Portfolio](./capturas_del_proyecto/captura2.png)
 
-![Infraestructura y Seguridad Cloud](./capturas_del_proyecto/captura3.jpg)
+![Infraestructura y Seguridad Cloud](./capturas_del_proyecto/captura3.png)
 
-![Planes y Servicios Integrales](./capturas_del_proyecto/captura4.jpg)
+![Planes y Servicios Integrales](./capturas_del_proyecto/captura4.png)
 
-![Sección Nosotros - Filosofía](./capturas_del_proyecto/captura5.jpg)
+![Sección Nosotros - Filosofía](./capturas_del_proyecto/captura5.png)
 
 ## Configuración
 
