@@ -4,6 +4,18 @@ CodeWeb es una aplicación web basada en Vite, React y TypeScript. Está diseña
 
 El proyecto incorpora un layout principal con animaciones discretas, un área de portafolio, un formulario de contacto con opciones de proyecto y un banner de aceptación de cookies. La configuración de Tailwind CSS gestiona el estilo global y los ajustes de diseño.
 
+## Capturas del proyecto
+
+![Vista del proyecto - Imagen 1](https://raw.githubusercontent.com/brunorios21/CodeWeb_Argentina/main/capturas_del_proyecto/imagen1.png)
+
+![Vista del proyecto - Imagen 2](https://raw.githubusercontent.com/brunorios21/CodeWeb_Argentina/main/capturas_del_proyecto/imagen2.png)
+
+![Vista del proyecto - Imagen 3](https://raw.githubusercontent.com/brunorios21/CodeWeb_Argentina/main/capturas_del_proyecto/imagen3.png)
+
+![Vista del proyecto - Imagen 4](https://raw.githubusercontent.com/brunorios21/CodeWeb_Argentina/main/capturas_del_proyecto/imagen4.png)
+
+![Vista del proyecto - Imagen 5](https://raw.githubusercontent.com/brunorios21/CodeWeb_Argentina/main/capturas_del_proyecto/imagen5.png)
+
 ## Configuración
 
 El proyecto se inicializa con las dependencias estándar de Vite y React. Para comenzar a trabajar en el entorno de desarrollo, se usa el gestor de paquetes instalado en el proyecto.
