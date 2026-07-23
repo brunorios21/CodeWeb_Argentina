@@ -6,15 +6,15 @@ El proyecto incorpora un layout principal con animaciones discretas, un área de
 
 ## Capturas del proyecto
 
-![Vista del proyecto - Imagen 1](https://raw.githubusercontent.com/brunorios21/CodeWeb_Argentina/main/capturas_del_proyecto/imagen1.png)
+![Vista Principal - Hero Section](./capturas_del_proyecto/captura1.jpg)
 
-![Vista del proyecto - Imagen 2](https://raw.githubusercontent.com/brunorios21/CodeWeb_Argentina/main/capturas_del_proyecto/imagen2.png)
+![Métricas y Proyectos - Portfolio](./capturas_del_proyecto/captura2.jpg)
 
-![Vista del proyecto - Imagen 3](https://raw.githubusercontent.com/brunorios21/CodeWeb_Argentina/main/capturas_del_proyecto/imagen3.png)
+![Infraestructura y Seguridad Cloud](./capturas_del_proyecto/captura3.jpg)
 
-![Vista del proyecto - Imagen 4](https://raw.githubusercontent.com/brunorios21/CodeWeb_Argentina/main/capturas_del_proyecto/imagen4.png)
+![Planes y Servicios Integrales](./capturas_del_proyecto/captura4.jpg)
 
-![Vista del proyecto - Imagen 5](https://raw.githubusercontent.com/brunorios21/CodeWeb_Argentina/main/capturas_del_proyecto/imagen5.png)
+![Sección Nosotros - Filosofía](./capturas_del_proyecto/captura5.jpg)
 
 ## Configuración
 
