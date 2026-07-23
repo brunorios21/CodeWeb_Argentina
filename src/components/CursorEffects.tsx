@@ -25,8 +25,12 @@ export function CursorEffects() {
       context.setTransform(ratio, 0, 0, ratio, 0, 0)
     }
 
-    const move = (event: MouseEvent) => setCursor({ x: event.clientX, y: event.clientY, visible: true })
-    const burst = (event: MouseEvent) => {
+    const move = (event: PointerEvent) => {
+      if (event.pointerType !== 'mouse') return
+      setCursor({ x: event.clientX, y: event.clientY, visible: true })
+    }
+    const burst = (event: PointerEvent) => {
+      if (event.pointerType !== 'mouse') return
       for (let index = 0; index < 24; index += 1) {
         const angle = (Math.PI * 2 * index) / 24 + Math.random() * 0.25
         const speed = 1.5 + Math.random() * 3.5
@@ -59,12 +63,13 @@ export function CursorEffects() {
     resize()
     render()
     window.addEventListener('resize', resize)
-    window.addEventListener('mousemove', move)
-    window.addEventListener('mousedown', burst)
+    // Capture phase keeps the custom cursor in sync even when a dialog traps focus.
+    window.addEventListener('pointermove', move, true)
+    window.addEventListener('pointerdown', burst, true)
     return () => {
       window.removeEventListener('resize', resize)
-      window.removeEventListener('mousemove', move)
-      window.removeEventListener('mousedown', burst)
+      window.removeEventListener('pointermove', move, true)
+      window.removeEventListener('pointerdown', burst, true)
       if (frameRef.current) window.cancelAnimationFrame(frameRef.current)
     }
   }, [])

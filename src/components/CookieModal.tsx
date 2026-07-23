@@ -33,8 +33,8 @@ export function CookieModal() {
   if (!isOpen) return null
 
   return createPortal(
-    <div className="cookie-overlay" role="presentation">
-      <section className="cookie-modal" role="dialog" aria-modal="true" aria-labelledby="cookie-title">
+    <div className="cookie-overlay modal-backdrop" role="presentation">
+      <section className="cookie-modal terms-modal" role="dialog" aria-modal="true" aria-labelledby="cookie-title" tabIndex={-1}>
         <p className="eyebrow">Privacidad y cookies</p>
         <h2 id="cookie-title">Tu experiencia, con control.</h2>
         <p>
