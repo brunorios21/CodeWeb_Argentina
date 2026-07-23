@@ -6,7 +6,7 @@ export function Terms() {
     <div className="page-wrap terms-page">
       <section className="mx-auto max-w-4xl px-4 pb-28 pt-32 sm:px-6 sm:pt-40">
         <Link to="/" className="terms-brand" aria-label="Volver al inicio de CodeWeb">
-          <img src="/favicon.svg" alt="CodeWeb" />
+          <img src="/favicon.svg" alt="CodeWeb" width="32" height="32" decoding="async" />
           <span>Code<span className="gradient-text">Web</span></span>
         </Link>
         <p className="eyebrow mt-12">Información legal</p>

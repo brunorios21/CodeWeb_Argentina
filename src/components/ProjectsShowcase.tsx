@@ -100,6 +100,10 @@ export function ProjectsShowcase() {
                   <motion.img
                     src={project.image}
                     alt={project.title}
+                    loading="lazy"
+                    decoding="async"
+                    width="1600"
+                    height="900"
                     className="w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105"
                     onError={(e) => {
                       const target = e.target as HTMLImageElement

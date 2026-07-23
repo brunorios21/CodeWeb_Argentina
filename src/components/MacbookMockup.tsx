@@ -13,7 +13,7 @@ export function MacbookMockup({ imageSrc, title, children }: MacbookMockupProps)
       <div className="macbook-traffic-lights" aria-hidden="true"><span className="macbook-light-close">×</span><span className="macbook-light-minimize">−</span><span className="macbook-light-maximize">+</span></div>
       <div className="macbook-notch"><span /></div>
       <div className="macbook-screen">
-        <img src={imageSrc} alt={title} />
+        <img src={imageSrc} alt={title} loading="lazy" decoding="async" width="1600" height="900" />
         <div className="macbook-glass" aria-hidden="true" />
         {children}
       </div>

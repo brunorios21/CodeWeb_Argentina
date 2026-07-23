@@ -1,5 +1,5 @@
-import { useEffect } from 'react'
-import { AnimatePresence, motion } from 'framer-motion'
+import { useEffect, useState } from 'react'
+import { AnimatePresence, MotionConfig, motion } from 'framer-motion'
 import { Copyright, FileText, FolderKanban, Mail, MessageCircle, Rocket, Users } from 'lucide-react'
 import { BrowserRouter, Link, Navigate, Route, Routes, useLocation } from 'react-router-dom'
 import { Navbar } from './components/Navbar'
@@ -23,6 +23,14 @@ function Footer() {
 
 function Layout() {
   const location = useLocation()
+  const [reduceMotion, setReduceMotion] = useState(false)
+  useEffect(() => {
+    const queries = [window.matchMedia('(max-width: 768px)'), window.matchMedia('(prefers-reduced-motion: reduce)')]
+    const update = () => setReduceMotion(queries.some((query) => query.matches))
+    update()
+    queries.forEach((query) => query.addEventListener('change', update))
+    return () => queries.forEach((query) => query.removeEventListener('change', update))
+  }, [])
   useEffect(() => {
     const sections = Array.from(document.querySelectorAll<HTMLElement>('main section, footer'))
     const observer = new IntersectionObserver((entries) => entries.forEach(({ target, isIntersecting }) => { if (isIntersecting) target.classList.add('scroll-reveal-visible') }), { threshold: 0.12, rootMargin: '0px 0px -7% 0px' })
@@ -30,7 +38,7 @@ function Layout() {
     return () => observer.disconnect()
   }, [location.pathname])
 
-  return <div className="site-shell"><div className="tech-grid" aria-hidden="true" /><div className="ambient ambient-one" /><div className="ambient ambient-two" /><CursorEffects /><Navbar /><AnimatePresence mode="wait"><motion.main key={location.pathname} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }} transition={{ duration: 0.3 }}><Routes location={location}><Route path="/" element={<Home />} /><Route path="/inicio" element={<Navigate to="/" replace />} /><Route path="/nosotros" element={<About />} /><Route path="/proyectos" element={<Projects />} /><Route path="/testimonios" element={<Testimonials />} /><Route path="/faq" element={<FAQ />} /><Route path="/contacto" element={<Contact />} /><Route path="/terminos" element={<Terms />} /><Route path="*" element={<Navigate to="/" replace />} /></Routes></motion.main></AnimatePresence><Footer /><CookieModal /><a className="whatsapp-float" href="https://wa.me/5491123240691" target="_blank" rel="noopener noreferrer" aria-label="Abrir WhatsApp" style={{ position: 'fixed', right: '24px', bottom: '24px', left: 'auto', zIndex: 99999 }}><img src="/whatsapp.svg" alt="" /></a></div>
+  return <MotionConfig reducedMotion={reduceMotion ? 'always' : 'user'}><div className="site-shell"><div className="tech-grid" aria-hidden="true" /><div className="ambient ambient-one" /><div className="ambient ambient-two" /><CursorEffects /><Navbar /><AnimatePresence mode="wait"><motion.main key={location.pathname} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }} transition={{ duration: 0.3 }}><Routes location={location}><Route path="/" element={<Home />} /><Route path="/inicio" element={<Navigate to="/" replace />} /><Route path="/nosotros" element={<About />} /><Route path="/proyectos" element={<Projects />} /><Route path="/testimonios" element={<Testimonials />} /><Route path="/faq" element={<FAQ />} /><Route path="/contacto" element={<Contact />} /><Route path="/terminos" element={<Terms />} /><Route path="*" element={<Navigate to="/" replace />} /></Routes></motion.main></AnimatePresence><Footer /><CookieModal /><a className="whatsapp-float" href="https://wa.me/5491123240691" target="_blank" rel="noopener noreferrer" aria-label="Abrir WhatsApp" style={{ position: 'fixed', right: '24px', bottom: '24px', left: 'auto', zIndex: 99999 }}><img src="/whatsapp.svg" alt="" width="60" height="60" decoding="async" /></a></div></MotionConfig>
 }
 
 export default function App() { return <BrowserRouter><Layout /></BrowserRouter> }

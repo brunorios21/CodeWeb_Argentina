@@ -1,16 +1,18 @@
 import { motion } from 'framer-motion'
 import { ArrowRight, Boxes, Gauge, HeartHandshake, Layers3, Code2 } from 'lucide-react'
 import { Link } from 'react-router-dom'
+import { useDecorativeVideoEnabled } from '../components/VideoBackground'
 
 const principles = [{ icon: Gauge, title: 'Velocidad con criterio', text: 'Landing pages en aproximadamente 3 días y aplicaciones web en menos de una semana, sin sacrificar calidad.' }, { icon: HeartHandshake, title: 'Trato directo', text: 'Trabajás con quien diseña y construye. Menos intermediarios, más claridad y mejores decisiones.' }, { icon: Boxes, title: 'Pensado para crecer', text: 'Arquitectura limpia, componentes reutilizables y una base lista para acompañar la evolución de tu negocio.' }]
 const stack = ['React', 'Node.js', 'Express', 'Tailwind', 'Vite', 'JavaScript']
 
 export function About() {
+  const isVideoEnabled = useDecorativeVideoEnabled()
   return <div className="page-wrap">
     <section className="about-video-hero mx-auto max-w-7xl px-4 pb-20 pt-32 sm:px-6 sm:pt-40">
-      <video className="about-video-background" autoPlay loop muted playsInline preload="metadata" aria-hidden="true">
+      {isVideoEnabled && <video className="about-video-background" autoPlay loop muted playsInline preload="metadata" aria-hidden="true">
         <source src="/projects/fondo1.mp4" type="video/mp4" />
-      </video>
+      </video>}
       <div className="about-video-overlay" />
       <div className="about-video-content">
         <div className="mx-auto max-w-3xl text-center"><p className="eyebrow justify-center"><Code2 size={14} /> Nosotros</p><h1 className="page-title mx-auto">Tecnología simple para <span className="gradient-text">negocios ambiciosos.</span></h1><p className="hero-copy mx-auto">CodeWeb es un estudio digital independiente. Combinamos estrategia, diseño y desarrollo full-stack para crear experiencias digitales con impacto real.</p></div>

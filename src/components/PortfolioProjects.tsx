@@ -75,6 +75,10 @@ function BrowserWindow({ image, alt }: { image: string; alt: string }) {
           <motion.img
             src={image}
             alt={alt}
+            loading="lazy"
+            decoding="async"
+            width="1600"
+            height="900"
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
             className="h-full w-full object-cover object-top"
