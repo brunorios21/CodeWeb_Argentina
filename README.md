@@ -1,10 +1,12 @@
-# CodeWeb
+# **CodeWeb — Studio Digital & Desarrollo Web**
 
-CodeWeb es una aplicación web basada en Vite, React y TypeScript. Está diseñada para presentar una experiencia profesional de landing page con un enfoque en rendimiento, diseño responsivo y una interfaz moderna.
+**CodeWeb** es una aplicación web moderna basada en **Vite**, **React** y **TypeScript**. Está diseñada para presentar una experiencia profesional de *landing page* de alto impacto, priorizando el **rendimiento**, la **arquitectura limpia**, la **adaptabilidad responsiva** y una **interfaz gráfica neón de nivel premium**.
 
-El proyecto incorpora un layout principal con animaciones discretas, un área de portafolio, un formulario de contacto con opciones de proyecto y un banner de aceptación de cookies. La configuración de Tailwind CSS gestiona el estilo global y los ajustes de diseño.
+El proyecto integra un *layout* principal con **animaciones optimizadas por GPU**, un **portafolio interactivo de proyectos**, un **formulario de contacto dinámico** con selección de servicios y un **banner de gestión de privacidad y cookies**. Toda la identidad visual y los estilos globales están construidos sobre **Tailwind CSS**.
 
-## Capturas del proyecto
+---
+
+## **Capturas del proyecto**
 
 ![Vista Principal - Hero Section](./capturas_del_proyecto/captura1.png)
 
@@ -16,30 +18,57 @@ El proyecto incorpora un layout principal con animaciones discretas, un área de
 
 ![Sección Nosotros - Filosofía](./capturas_del_proyecto/captura5.png)
 
-## Configuración
+---
 
-El proyecto se inicializa con las dependencias estándar de Vite y React. Para comenzar a trabajar en el entorno de desarrollo, se usa el gestor de paquetes instalado en el proyecto.
+## **Configuración del Entorno**
 
-El flujo incluye la instalación de dependencias, el arranque del servidor local y la compilación de producción para generar el paquete final.
+El proyecto está inicializado sobre el ecosistema estándar de **Vite + React**. Para desplegar el entorno de desarrollo local, se utiliza el gestor de paquetes configurado en el proyecto.
 
-## Desarrollo
+El flujo de trabajo contempla la **instalación de dependencias**, el **servidor de desarrollo en tiempo real (HMR)** y el **proceso de compilación para producción**.
 
-La carpeta `src` contiene los componentes de la aplicación y la hoja de estilos principal. `App.tsx` centraliza la estructura de la página y el control de estado del banner de cookies, mientras que los componentes en `src/components` encapsulan secciones específicas como el portafolio, el formulario de contacto y la arquitectura del proceso.
+---
 
-La página está optimizada para visualizaciones móviles y para vistas de desarrollador en navegadores con un ancho reducido. Las animaciones se adaptan a las preferencias del usuario para mejorar el rendimiento en dispositivos y navegadores con capacidad limitada.
+## **Arquitectura y Desarrollo**
 
-## Producción
+La carpeta `src/` concentra el **código fuente** y los **estilos globales**:
 
-La compilación de producción utiliza TypeScript en modo de proyecto y Vite para generar los activos finales en la carpeta `dist`. El proceso de build verifica el código y produce un paquete listo para desplegar.
+* **`App.tsx`**: Componente orquestador que centraliza el estado global, el control del banner de privacidad y la integración de secciones.
+* **`src/components/`**: Módulos independientes y reutilizables que encapsulan la lógica del **portafolio**, el **formulario de contacto**, las **propuestas de servicio** y la **arquitectura técnica**.
 
-El archivo `index.html` establece el viewport adecuado y carga el archivo principal de la aplicación. El banner de cookies se guarda en el almacenamiento local del navegador para respetar la elección del usuario.
+El sitio está optimizado con un enfoque **Mobile-First** y testeado en resoluciones reducidas. Las transiciones visuales se adaptan a las preferencias del sistema (`prefers-reduced-motion`) para garantizar un **rendimiento fluido** en todo tipo de dispositivos.
 
-## Archivos clave
+---
 
-`src/App.tsx` define la estructura de la página, el banner de cookies y las secciones principales. `src/index.css` contiene estilos globales, optimizaciones de scroll y reglas de adaptabilidad. `src/components` agrupa los módulos reutilizables que componen la interfaz.
+## **Compilación y Producción**
 
-El documento incluye una página independiente de términos y condiciones disponible como `terms.html`.
+El proceso de construcción para producción utiliza el compilador de **TypeScript** en modo estricto y el empaquetador de **Vite**, generando los activos finales optimizados dentro del directorio `/dist`.
 
-## Ejecución
+El archivo `index.html` establece los metadatos esenciales, el *viewport* responsivo y la carga de los módulos principales. El estado del banner de aceptación se persiste en el **`localStorage` del navegador** para respetar las preferencias del usuario en sesiones futuras.
 
-El proyecto se ejecuta con los comandos del gestor de paquetes definidos en `package.json`. La configuración de Vite facilita el desarrollo local con recarga en caliente y la generación de una build de producción eficiente.
+---
+
+## **Archivos Clave del Sistema**
+
+* **`src/App.tsx`**: Estructura principal y control de flujo de la aplicación.
+* **`src/index.css`**: Hojas de estilo globales, animaciones personalizadas y reglas del puntero/scroll.
+* **`src/components/`**: Módulos de interfaz de usuario de alta modularidad.
+* **`terms.html`**: Documento legal independiente para los términos y condiciones del servicio.
+
+---
+
+## **Ejecución de Comandos**
+
+El ciclo de vida del proyecto se gestiona mediante los comandos declarados en el archivo `package.json`:
+
+```bash
+# Instalación de dependencias
+npm install
+
+# Servidor de desarrollo local
+npm run dev
+
+# Compilación y validación de tipos para producción
+npm run build
+
+# Vista previa de la build de producción
+npm run preview
