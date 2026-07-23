@@ -4,6 +4,10 @@
 
 El proyecto integra un *layout* principal con **animaciones optimizadas por GPU**, un **portafolio interactivo de proyectos**, un **formulario de contacto dinámico** con selección de servicios y un **banner de gestión de privacidad y cookies**. Toda la identidad visual y los estilos globales están construidos sobre **Tailwind CSS**.
 
+## Visualización en linea:
+
+codewebbargentina.netlify.app
+
 ---
 
 ## **Capturas del proyecto**
