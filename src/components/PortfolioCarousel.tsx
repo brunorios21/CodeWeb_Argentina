@@ -102,10 +102,6 @@ function ProjectWindow({ image, alt, enableTilt }: { image: string; alt: string;
             key={image}
             src={image}
             alt={alt}
-            loading="lazy"
-            decoding="async"
-            width="1600"
-            height="900"
             initial={{ scale: 1.02 }}
             animate={{ scale: 1 }}
             whileHover={enableTilt ? { scale: 1.04 } : undefined}
@@ -171,14 +167,14 @@ export function PortfolioCarousel() {
 
   // Autoplay with pause on hover
   useEffect(() => {
-    if (isPaused || isMobile) return
+    if (isPaused) return
 
     const interval = setInterval(() => {
       paginate(1)
     }, 5000)
 
     return () => clearInterval(interval)
-  }, [isMobile, isPaused, paginate])
+  }, [isPaused, paginate])
 
   const current = projects[index]
 
