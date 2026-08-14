@@ -65,11 +65,11 @@ export const projectsData: readonly PortfolioProject[] = [
     images: ['/projects/pctech-catalog.jpg'],
   },
   {
-    id: 'codeweb-argentina',
-    title: 'CodeWeb Argentina',
+    id: 'Black Frame Studio',
+    title: 'Tinda de Estudio Fotografico',
     category: 'Marca · Portfolio',
     description: 'La casa digital de nuestro estudio: identidad, conversión y desarrollo en una sola pantalla.',
-    demoUrl: 'https://code-web-argentina.vercel.app/',
+    demoUrl: 'https://black-frame-studio-e-commerce.vercel.app/',
     images: ['/projects/blackframe-hero.jpg'],
   },
 ]
