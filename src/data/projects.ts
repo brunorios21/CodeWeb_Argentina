@@ -13,7 +13,7 @@ export const projectsData: readonly PortfolioProject[] = [
     title: 'ARKHE Studio',
     category: 'Estudio de Arquitectura y Diseño',
     description: 'Portfolio visual inmersivo que pone en primer plano la obra, el proceso y la identidad del estudio.',
-    demoUrl: 'https://arkhestudio-01.netlify.app/#sobre-nosotros',
+    demoUrl: 'https://arkhe-ashy.vercel.app/',
     images: [
       '/projects/capturas_del_proyecto01/imagen1.jpg',
       '/projects/capturas_del_proyecto01/imagen2.jpg',
@@ -29,7 +29,7 @@ export const projectsData: readonly PortfolioProject[] = [
     title: 'AutoImport',
     category: 'Plataforma de Importación y Venta Vehicular',
     description: 'Experiencia de producto clara para explorar vehículos, servicios de importación y oportunidades comerciales.',
-    demoUrl: 'https://autoimport02.netlify.app/',
+    demoUrl: 'https://code-web-autoimport-2yllua6zf-brunorioscorp4-4854s-projects.vercel.app/',
     images: [
       '/projects/capturas_del_proyecto02/imagen1.png',
       '/projects/capturas_del_proyecto02/imagen2.png',
@@ -53,7 +53,7 @@ export const projectsData: readonly PortfolioProject[] = [
     title: 'Carnicería Luca',
     category: 'E-commerce · Gastronomía',
     description: 'Una experiencia digital cercana y directa para un negocio local que quería vender mejor.',
-    demoUrl: 'https://carnicerialutab.netlify.app/',
+    demoUrl: 'https://butchery-service-management.vercel.app/',
     images: ['/projects/lucas-dashboard.jpg'],
   },
   {
@@ -69,7 +69,8 @@ export const projectsData: readonly PortfolioProject[] = [
     title: 'CodeWeb Argentina',
     category: 'Marca · Portfolio',
     description: 'La casa digital de nuestro estudio: identidad, conversión y desarrollo en una sola pantalla.',
-    demoUrl: 'https://codewebargentina.netlify.app/',
+    demoUrl: 'https://code-web-argentina.vercel.app/',
     images: ['/projects/blackframe-hero.jpg'],
   },
 ]
+
